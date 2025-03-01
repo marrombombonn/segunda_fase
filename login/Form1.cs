@@ -53,29 +53,28 @@ namespace Login
 
         private void buttonCadastrar_Click(object sender, EventArgs e)
         {
-            string novoUsuario = textBoxNovoUsuario.Text;
-            string novaSenha = textBoxSenha.Text;
+            string novoUsuario = textBoxUsuario.Text;
+            string NovaSenha = textBoxSenha.Text;
 
             bool usuarioEncontrado = false;
-
             for (int i = 0; i < listaUsuarios.Count; i++)
             {
                 if (novoUsuario == listaUsuarios[i])
                 {
-                    usuarioEncontrado |= true;
+                    usuarioEncontrado = true;
                 }
             }
-            if (!usuarioEncontrado == false)
+
+            if (!usuarioEncontrado)
             {
                 listaUsuarios.Add(novoUsuario);
-                listaSenhas.Add(novaSenha);
-                labelNovoUsuario.Text = "Usuario cadastrado com sucesso!";
+                listaSenhas.Add(novoUsuario);
+                labelNovoUsuario.Text = "Usuário cadastrado com sucesso";
             }
             else
             {
-                labelNovoUsuario.Text = "Já cadastrado com sucesso!";
+                labelNovoUsuario.Text = "já existe";
             }
-           
-        } 
+        }
     }
 }
