@@ -100,7 +100,7 @@
             // 
             labelNovoUsuario.AutoSize = true;
             labelNovoUsuario.Font = new Font("Segoe UI", 14F);
-            labelNovoUsuario.Location = new Point(389, 184);
+            labelNovoUsuario.Location = new Point(261, 250);
             labelNovoUsuario.Name = "labelNovoUsuario";
             labelNovoUsuario.Size = new Size(0, 25);
             labelNovoUsuario.TabIndex = 11;
