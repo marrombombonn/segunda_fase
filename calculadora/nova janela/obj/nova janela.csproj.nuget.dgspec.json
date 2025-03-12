@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\joao.mamendonca\\source\\repos\\calculadora\\nova janela\\nova janela.csproj": {}
+    "C:\\Users\\joao.mamendonca\\Desktop\\segunda_fase\\segunda_fase\\calculadora\\nova janela\\nova janela.csproj": {}
   },
   "projects": {
-    "C:\\Users\\joao.mamendonca\\source\\repos\\calculadora\\nova janela\\nova janela.csproj": {
+    "C:\\Users\\joao.mamendonca\\Desktop\\segunda_fase\\segunda_fase\\calculadora\\nova janela\\nova janela.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\joao.mamendonca\\source\\repos\\calculadora\\nova janela\\nova janela.csproj",
+        "projectUniqueName": "C:\\Users\\joao.mamendonca\\Desktop\\segunda_fase\\segunda_fase\\calculadora\\nova janela\\nova janela.csproj",
         "projectName": "nova janela",
-        "projectPath": "C:\\Users\\joao.mamendonca\\source\\repos\\calculadora\\nova janela\\nova janela.csproj",
+        "projectPath": "C:\\Users\\joao.mamendonca\\Desktop\\segunda_fase\\segunda_fase\\calculadora\\nova janela\\nova janela.csproj",
         "packagesPath": "C:\\Users\\joao.mamendonca\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\joao.mamendonca\\source\\repos\\calculadora\\nova janela\\obj\\",
+        "outputPath": "C:\\Users\\joao.mamendonca\\Desktop\\segunda_fase\\segunda_fase\\calculadora\\nova janela\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("nova janela")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7ce9080db71ba7fe4718699ad6f404e44f11ffc6")]
 [assembly: System.Reflection.AssemblyProductAttribute("nova janela")]
 [assembly: System.Reflection.AssemblyTitleAttribute("nova janela")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

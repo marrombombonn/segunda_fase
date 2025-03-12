@@ -10,10 +10,12 @@ namespace calculadora
 
 
 
-        private void button1_Click(object sender, EventArgs e)
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
 
 
         {
+            labelOperacao.Text = "+";
+
             if (textBox1.Text.All(char.IsNumber) && textBox2.Text.All(char.IsNumber))
             {
                 int numero1 = int.Parse(textBox1.Text);
@@ -27,8 +29,9 @@ namespace calculadora
             }
         }
 
-        private void subtracao_Click(object sender, EventArgs e)
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
         {
+            labelOperacao.Text = "-";
             if (textBox1.Text.All(char.IsNumber) && textBox2.Text.All(char.IsNumber))
             {
                 int numero1 = int.Parse(textBox1.Text);
@@ -42,8 +45,9 @@ namespace calculadora
             }
         }
 
-        private void multiplicacao_Click(object sender, EventArgs e)
+        private void radioButton4_CheckedChanged(object sender, EventArgs e)
         {
+            labelOperacao.Text = "*";
             if (textBox1.Text.All(char.IsNumber) && textBox2.Text.All(char.IsNumber))
             {
                 int numero1 = int.Parse(textBox1.Text);
@@ -59,8 +63,9 @@ namespace calculadora
 
         }
 
-        private void divisao_Click(object sender, EventArgs e)
+        private void radioButton3_CheckedChanged(object sender, EventArgs e)
         {
+            labelOperacao.Text = "/";
             if (textBox1.Text.All(char.IsNumber) && textBox2.Text.All(char.IsNumber))
             {
                 int numero1 = int.Parse(textBox1.Text);
@@ -85,6 +90,16 @@ namespace calculadora
             Form2 novaJanela = new Form2();
             novaJanela.Show();
             this.Hide();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
