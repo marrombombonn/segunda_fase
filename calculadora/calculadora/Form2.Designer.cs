@@ -28,127 +28,172 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
-            LabelPerimetro = new RadioButton();
-            LabelArea = new RadioButton();
-            LabelVolume = new RadioButton();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            textBox3 = new TextBox();
+            textBoxP1 = new TextBox();
+            textBoxP2 = new TextBox();
+            textBoxP3 = new TextBox();
+            textBoxP4 = new TextBox();
             LabelResultado = new Label();
-            LabelOperacao1 = new Label();
-            LabelOperacao2 = new Label();
-            pictureBox1 = new PictureBox();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            LabelInstrucao = new Label();
+            labeli = new Label();
+            labelText1 = new Label();
+            labelText2 = new Label();
+            labelText4 = new Label();
+            labelText3 = new Label();
+            calcular = new Button();
+            area = new Button();
+            perimetro = new Button();
+            volume = new Button();
             SuspendLayout();
             // 
-            // LabelPerimetro
+            // textBoxP1
             // 
-            LabelPerimetro.AutoSize = true;
-            LabelPerimetro.Location = new Point(12, 141);
-            LabelPerimetro.Name = "LabelPerimetro";
-            LabelPerimetro.Size = new Size(77, 19);
-            LabelPerimetro.TabIndex = 0;
-            LabelPerimetro.TabStop = true;
-            LabelPerimetro.Text = "Perimetro";
-            LabelPerimetro.UseVisualStyleBackColor = true;
+            textBoxP1.Location = new Point(22, 107);
+            textBoxP1.Name = "textBoxP1";
+            textBoxP1.Size = new Size(100, 23);
+            textBoxP1.TabIndex = 3;
+            textBoxP1.Visible = false;
             // 
-            // LabelArea
+            // textBoxP2
             // 
-            LabelArea.AutoSize = true;
-            LabelArea.Location = new Point(12, 166);
-            LabelArea.Name = "LabelArea";
-            LabelArea.Size = new Size(49, 19);
-            LabelArea.TabIndex = 1;
-            LabelArea.TabStop = true;
-            LabelArea.Text = "Area";
-            LabelArea.UseVisualStyleBackColor = true;
+            textBoxP2.Location = new Point(128, 107);
+            textBoxP2.Name = "textBoxP2";
+            textBoxP2.Size = new Size(100, 23);
+            textBoxP2.TabIndex = 4;
+            textBoxP2.Visible = false;
             // 
-            // LabelVolume
+            // textBoxP3
             // 
-            LabelVolume.AutoSize = true;
-            LabelVolume.Location = new Point(12, 191);
-            LabelVolume.Name = "LabelVolume";
-            LabelVolume.Size = new Size(65, 19);
-            LabelVolume.TabIndex = 2;
-            LabelVolume.TabStop = true;
-            LabelVolume.Text = "Volume";
-            LabelVolume.UseVisualStyleBackColor = true;
+            textBoxP3.Location = new Point(234, 107);
+            textBoxP3.Name = "textBoxP3";
+            textBoxP3.Size = new Size(100, 23);
+            textBoxP3.TabIndex = 5;
+            textBoxP3.Visible = false;
             // 
-            // textBox1
+            // textBoxP4
             // 
-            textBox1.Location = new Point(130, 69);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(100, 23);
-            textBox1.TabIndex = 3;
-            // 
-            // textBox2
-            // 
-            textBox2.Location = new Point(251, 69);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(100, 23);
-            textBox2.TabIndex = 4;
-            // 
-            // textBox3
-            // 
-            textBox3.Location = new Point(371, 69);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(100, 23);
-            textBox3.TabIndex = 5;
+            textBoxP4.Location = new Point(340, 107);
+            textBoxP4.Name = "textBoxP4";
+            textBoxP4.Size = new Size(100, 23);
+            textBoxP4.TabIndex = 6;
+            textBoxP4.Visible = false;
             // 
             // LabelResultado
             // 
             LabelResultado.AutoSize = true;
-            LabelResultado.Location = new Point(502, 77);
+            LabelResultado.Location = new Point(22, 334);
             LabelResultado.Name = "LabelResultado";
             LabelResultado.Size = new Size(0, 15);
-            LabelResultado.TabIndex = 6;
+            LabelResultado.TabIndex = 7;
             // 
-            // LabelOperacao1
+            // LabelInstrucao
             // 
-            LabelOperacao1.AutoSize = true;
-            LabelOperacao1.Location = new Point(236, 77);
-            LabelOperacao1.Name = "LabelOperacao1";
-            LabelOperacao1.Size = new Size(0, 15);
-            LabelOperacao1.TabIndex = 7;
+            LabelInstrucao.AutoSize = true;
+            LabelInstrucao.Location = new Point(22, 28);
+            LabelInstrucao.Name = "LabelInstrucao";
+            LabelInstrucao.Size = new Size(0, 15);
+            LabelInstrucao.TabIndex = 8;
             // 
-            // LabelOperacao2
+            // labeli
             // 
-            LabelOperacao2.AutoSize = true;
-            LabelOperacao2.Location = new Point(357, 77);
-            LabelOperacao2.Name = "LabelOperacao2";
-            LabelOperacao2.Size = new Size(0, 15);
-            LabelOperacao2.TabIndex = 8;
+            labeli.AutoSize = true;
+            labeli.Location = new Point(22, 58);
+            labeli.Name = "labeli";
+            labeli.Size = new Size(0, 15);
+            labeli.TabIndex = 9;
             // 
-            // pictureBox1
+            // labelText1
             // 
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(420, 141);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(269, 165);
-            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox1.TabIndex = 9;
-            pictureBox1.TabStop = false;
-            pictureBox1.Click += pictureBox1_Click;
+            labelText1.AutoSize = true;
+            labelText1.Location = new Point(49, 89);
+            labelText1.Name = "labelText1";
+            labelText1.Size = new Size(0, 15);
+            labelText1.TabIndex = 10;
+            // 
+            // labelText2
+            // 
+            labelText2.AutoSize = true;
+            labelText2.Location = new Point(155, 89);
+            labelText2.Name = "labelText2";
+            labelText2.Size = new Size(0, 15);
+            labelText2.TabIndex = 11;
+            // 
+            // labelText4
+            // 
+            labelText4.AutoSize = true;
+            labelText4.Location = new Point(375, 89);
+            labelText4.Name = "labelText4";
+            labelText4.Size = new Size(0, 15);
+            labelText4.TabIndex = 12;
+            // 
+            // labelText3
+            // 
+            labelText3.AutoSize = true;
+            labelText3.Location = new Point(263, 89);
+            labelText3.Name = "labelText3";
+            labelText3.Size = new Size(0, 15);
+            labelText3.TabIndex = 13;
+            // 
+            // calcular
+            // 
+            calcular.Location = new Point(22, 308);
+            calcular.Name = "calcular";
+            calcular.Size = new Size(75, 23);
+            calcular.TabIndex = 14;
+            calcular.Text = "calcular";
+            calcular.UseVisualStyleBackColor = true;
+            // 
+            // area
+            // 
+            area.Location = new Point(22, 198);
+            area.Name = "area";
+            area.Size = new Size(75, 23);
+            area.TabIndex = 15;
+            area.Text = "Area";
+            area.UseVisualStyleBackColor = true;
+            area.Click += area_Click;
+            // 
+            // perimetro
+            // 
+            perimetro.Location = new Point(22, 227);
+            perimetro.Name = "perimetro";
+            perimetro.Size = new Size(75, 23);
+            perimetro.TabIndex = 16;
+            perimetro.Text = "Perimetro";
+            perimetro.UseVisualStyleBackColor = true;
+            perimetro.Click += perimetro_Click;
+            // 
+            // volume
+            // 
+            volume.Location = new Point(22, 256);
+            volume.Name = "volume";
+            volume.Size = new Size(75, 23);
+            volume.TabIndex = 17;
+            volume.Text = "Volume";
+            volume.UseVisualStyleBackColor = true;
+            volume.Click += volume_Click;
             // 
             // Form2
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(pictureBox1);
-            Controls.Add(LabelOperacao2);
-            Controls.Add(LabelOperacao1);
+            Controls.Add(volume);
+            Controls.Add(perimetro);
+            Controls.Add(area);
+            Controls.Add(calcular);
+            Controls.Add(labelText3);
+            Controls.Add(labelText4);
+            Controls.Add(labelText2);
+            Controls.Add(labelText1);
+            Controls.Add(labeli);
+            Controls.Add(LabelInstrucao);
             Controls.Add(LabelResultado);
-            Controls.Add(textBox3);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
-            Controls.Add(LabelVolume);
-            Controls.Add(LabelArea);
-            Controls.Add(LabelPerimetro);
+            Controls.Add(textBoxP4);
+            Controls.Add(textBoxP3);
+            Controls.Add(textBoxP2);
+            Controls.Add(textBoxP1);
             Name = "Form2";
             Text = "Form2";
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -158,15 +203,20 @@
         private RadioButton radioButton4;
         private RadioButton radioButton2;
         private RadioButton radioButton1;
-        private RadioButton LabelPerimetro;
-        private RadioButton LabelArea;
-        private RadioButton LabelVolume;
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private TextBox textBox3;
+        private TextBox textBoxP1;
+        private TextBox textBoxP2;
+        private TextBox textBoxP3;
+        private TextBox textBoxP4;
         private Label LabelResultado;
-        private Label LabelOperacao1;
-        private Label LabelOperacao2;
-        private PictureBox pictureBox1;
+        private Label LabelInstrucao;
+        private Label labeli;
+        private Label labelText1;
+        private Label labelText2;
+        private Label labelText4;
+        private Label labelText3;
+        private Button calcular;
+        private Button area;
+        private Button perimetro;
+        private Button volume;
     }
 }

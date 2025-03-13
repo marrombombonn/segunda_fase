@@ -16,6 +16,7 @@ namespace calculadora
         {
             labelOperacao.Text = "+";
 
+
             if (textBox1.Text.All(char.IsNumber) && textBox2.Text.All(char.IsNumber))
             {
                 int numero1 = int.Parse(textBox1.Text);
