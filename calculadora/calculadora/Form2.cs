@@ -1,128 +1,134 @@
-﻿namespace calculadora
+﻿
+namespace Calculadora
 {
-    public partial class Form2 : Form
+    public partial class NovoForm : Form
     {
-        public Form2()
+        public NovoForm()
         {
             InitializeComponent();
-            labelText1 = new System.Windows.Forms.Label();
-            labelText2 = new System.Windows.Forms.Label();
-            labelText3 = new System.Windows.Forms.Label();
-            labelText4 = new System.Windows.Forms.Label();
         }
 
-
-        private void perimetro_Click(object sender, EventArgs e)
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //Aqui deixa as textbox apenas que forem ser ultilizadas
-            textBoxP1.Visible = true;
-            textBoxP2.Visible = true;
-            textBoxP3.Visible = true;
-            textBoxP4.Visible = true;
-
-            labeli.Text = "O perímetro é a soma de todos os seus lados";
-            labelText1.Text = "Lado esquerdo";
-            labelText2.Text = "Lado direito";
-            labelText3.Text = "Base";
-            labelText1.Text = "Parte superior";
-            
-
-
-            if (string.IsNullOrEmpty(textBoxP1.Text) || string.IsNullOrEmpty(textBoxP2.Text) || string.IsNullOrEmpty(textBoxP3.Text) || string.IsNullOrEmpty(textBoxP4.Text))
+            if (comboBoxOpcao.SelectedItem == null)
             {
+                labelErro.Text = "Selecione um opção";
                 return;
             }
 
-            if (textBoxP1.Text.All(char.IsNumber) && textBoxP2.Text.All(char.IsNumber) && textBoxP3.Text.All(char.IsNumber) && textBoxP4.Text.All(char.IsNumber))
+            if (comboBoxOpcao.SelectedItem.ToString() == "Quadrado")
             {
-                int numero1 = int.Parse(textBoxP1.Text);
-                int numero2 = int.Parse(textBoxP2.Text);
-                int numero3 = int.Parse(textBoxP3.Text);
-                int numero4 = int.Parse(textBoxP4.Text);
-                int resultado = numero1 + numero2 + numero3 + numero4;
-                LabelResultado.Text = resultado.ToString();
-                
-            }
-            else
-            {
-                LabelResultado.Text = "Insira apenas numeros ( verifique seu há espaços em brancos, caracteres especiais ou letras)";
-            }
-
-        }
-
-        private void area_Click(object sender, EventArgs e)
-        {
-            if (string.IsNullOrEmpty(textBoxP1.Text) || string.IsNullOrEmpty(textBoxP2.Text) || string.IsNullOrEmpty(textBoxP3.Text) || string.IsNullOrEmpty(textBoxP4.Text))
-            {
+                groupBoxQuadrado.Visible = true;
+                groupBoxRetangulo.Visible = false;
+                groupBoxQuadrado.BringToFront();
+                groupBoxRetangulo.SendToBack();
                 return;
             }
 
-            //Aqui deixa as textbox apenas que forem ser ultilizadas
-            textBoxP1.Visible = true;
-            textBoxP2.Visible = true;
-            textBoxP3.Visible = false;
-            textBoxP4.Visible = false;
-
-
-            labeli.Text = "A área é a multiblicação de base por altura ";
-            labelText1.Text = "Base";
-            labelText2.Text = "Altura";
-            
-
-            if (textBoxP1.Text.All(char.IsNumber) && textBoxP2.Text.All(char.IsNumber))
+            if (comboBoxOpcao.SelectedItem.ToString() == "Retangulo")
             {
-                int numero1 = int.Parse(textBoxP1.Text);
-                int numero2 = int.Parse(textBoxP2.Text);
-
-                int resultado = numero1 * numero2;
-                LabelResultado.Text = resultado.ToString();
-                
-            }
-            else
-            {
-                LabelResultado.Text = "Insira apenas numeros ( verifique seu há espaços em brancos, caracteres especiais ou letras)";
+                groupBoxQuadrado.Visible = false;
+                groupBoxRetangulo.Visible = true;
+                groupBoxQuadrado.SendToBack();
+                groupBoxRetangulo.BringToFront();
+                return;
             }
         }
 
-        private void volume_Click(object sender, EventArgs e)
+        private void radioButtonPerimetro_CheckedChanged(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(textBoxP1.Text) || string.IsNullOrEmpty(textBoxP2.Text) || string.IsNullOrEmpty(textBoxP3.Text) || string.IsNullOrEmpty(textBoxP4.Text))
+            textBoxComprimento.Enabled = false;
+        }
+
+        private void radioButtonArea_CheckedChanged(object sender, EventArgs e)
+        {
+            textBoxComprimento.Enabled = false;
+        }
+
+        private void radioButtonVolume_CheckedChanged(object sender, EventArgs e)
+        {
+            textBoxComprimento.Enabled = true;
+        }
+
+        private void buttonCalcular_Click(object sender, EventArgs e)
+        {
+            labelErro.Text = "";
+
+            if (radioButtonPerimetro.Checked)
             {
-                return;
-            }
+                string largura = textBoxAltura.Text;
+                string altura = textBoxAltura.Text;
 
-            //Aqui deixa as textbox apenas que forem ser ultilizadas
-            textBoxP1.Visible = true;
-            textBoxP2.Visible = true;
-            textBoxP3.Visible = true;
-            textBoxP4.Visible = false;
-
-            labeli.Text = "O volume é a multiblicação da altura (h) pela largura (L) e pelo comprimento (C).";
-            labelText1.Text = "Altura";
-            labelText2.Text = "Largura";
-            labelText3.Text = "Comprimento";
-
-            
-
-            if (textBoxP1.Text.All(char.IsNumber) && textBoxP2.Text.All(char.IsNumber))
-            {
-                if (string.IsNullOrEmpty(textBoxP1.Text) || string.IsNullOrEmpty(textBoxP2.Text) || string.IsNullOrEmpty(textBoxP3.Text) || string.IsNullOrEmpty(textBoxP4.Text))
+                if (string.IsNullOrWhiteSpace(largura) || !largura.All(char.IsNumber))
                 {
+                    labelErro.Text = "Insira uma largura valida.";
                     return;
                 }
-                int numero1 = int.Parse(textBoxP1.Text);
-                int numero2 = int.Parse(textBoxP2.Text);
-                int numero3 = int.Parse(textBoxP3.Text);
-                int resultado = numero1 * numero2 * numero3;
-                LabelResultado.Text = resultado.ToString();
-                
+
+                if (string.IsNullOrWhiteSpace(altura) || !altura.All(char.IsNumber))
+                {
+                    labelErro.Text = "Insira uma altura valida.";
+                    return;
+                }
+
+                double resultado = (Convert.ToDouble(altura) * 2) + (Convert.ToDouble(largura) * 2);
+
+                textBoxResultado.Text = resultado.ToString();
+                return;
             }
-            else
+
+            if (radioButtonArea.Checked)
             {
-                LabelResultado.Text = "Insira apenas numeros ( verifique seu há espaços em brancos, caracteres especiais ou letras)";
+                string largura = textBoxAltura.Text;
+                string altura = textBoxAltura.Text;
+
+                if (string.IsNullOrWhiteSpace(largura) || !largura.All(char.IsNumber))
+                {
+                    labelErro.Text = "Insira uma largura valida.";
+                    return;
+                }
+
+                if (string.IsNullOrWhiteSpace(altura) || !altura.All(char.IsNumber))
+                {
+                    labelErro.Text = "Insira uma altura valida.";
+                    return;
+                }
+
+                double resultado = Convert.ToDouble(altura) * Convert.ToDouble(largura);
+
+                textBoxResultado.Text = resultado.ToString();
+                return;
+            }
+
+            if (radioButtonVolume.Checked)
+            {
+                string largura = textBoxLargura.Text;
+                string altura = textBoxAltura.Text;
+                string comprimento = textBoxComprimento.Text;
+
+                if (string.IsNullOrWhiteSpace(largura) || !largura.All(char.IsNumber))
+                {
+                    labelErro.Text = "Insira uma largura valida.";
+                    return;
+                }
+
+                if (string.IsNullOrWhiteSpace(altura) || !altura.All(char.IsNumber))
+                {
+                    labelErro.Text = "Insira uma altura valida.";
+                    return;
+                }
+
+                if (string.IsNullOrWhiteSpace(comprimento) || !comprimento.All(char.IsNumber))
+                {
+                    labelErro.Text = "Insira uma comprimento valida.";
+                    return;
+                }
+
+                double resultado = Convert.ToDouble(altura) * Convert.ToDouble(largura) * Convert.ToDouble(comprimento);
+
+                textBoxResultado.Text = resultado.ToString();
+                return;
             }
         }
-
-       
-}
+    }
 }

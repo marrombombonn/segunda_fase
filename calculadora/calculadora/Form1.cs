@@ -1,3 +1,5 @@
+using Calculadora;
+
 namespace calculadora
 {
     public partial class Form1 : Form
@@ -88,20 +90,12 @@ namespace calculadora
 
         private void novaJanela_Click(object sender, EventArgs e)
         {
-            Form2 novaJanela = new Form2();
+            NovoForm novaJanela = new NovoForm();
             novaJanela.Show();
             this.Hide();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }
 

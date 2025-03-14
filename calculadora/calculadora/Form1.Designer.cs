@@ -45,6 +45,7 @@
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(154, 23);
             textBox1.TabIndex = 5;
+         
             // 
             // textBox2
             // 
@@ -143,7 +144,6 @@
             Controls.Add(textBox1);
             Name = "Form1";
             Text = "Form1";
-            Load += Form1_Load;
             ResumeLayout(false);
             PerformLayout();
         }
