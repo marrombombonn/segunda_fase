@@ -11,12 +11,12 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("nova janela")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("cadastro_cliente")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c7dbf604af23c192fc6101cc3463ee899c658fef")]
-[assembly: System.Reflection.AssemblyProductAttribute("nova janela")]
-[assembly: System.Reflection.AssemblyTitleAttribute("nova janela")]
+[assembly: System.Reflection.AssemblyProductAttribute("cadastro_cliente")]
+[assembly: System.Reflection.AssemblyTitleAttribute("cadastro_cliente")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 [assembly: System.Runtime.Versioning.TargetPlatformAttribute("Windows7.0")]
 [assembly: System.Runtime.Versioning.SupportedOSPlatformAttribute("Windows7.0")]
