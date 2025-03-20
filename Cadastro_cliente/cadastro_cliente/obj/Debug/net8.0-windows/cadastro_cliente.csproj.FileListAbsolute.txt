@@ -1,0 +1,17 @@
+C:\Users\joao.mamendonca\Desktop\segunda_fase\segunda_fase\cadastro_cliente\cadastro_cliente\obj\Debug\net8.0-windows\cadastro_cliente.Clientes.resources
+C:\Users\joao.mamendonca\Desktop\segunda_fase\segunda_fase\cadastro_cliente\cadastro_cliente\obj\Debug\net8.0-windows\cadastro_cliente.csproj.GenerateResource.cache
+C:\Users\joao.mamendonca\Desktop\segunda_fase\segunda_fase\cadastro_cliente\cadastro_cliente\obj\Debug\net8.0-windows\cadastro_cliente.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\joao.mamendonca\Desktop\segunda_fase\segunda_fase\cadastro_cliente\cadastro_cliente\obj\Debug\net8.0-windows\cadastro_cliente.AssemblyInfoInputs.cache
+C:\Users\joao.mamendonca\Desktop\segunda_fase\segunda_fase\cadastro_cliente\cadastro_cliente\obj\Debug\net8.0-windows\cadastro_cliente.AssemblyInfo.cs
+C:\Users\joao.mamendonca\Desktop\segunda_fase\segunda_fase\cadastro_cliente\cadastro_cliente\obj\Debug\net8.0-windows\cadastro_cliente.csproj.CoreCompileInputs.cache
+C:\Users\joao.mamendonca\Desktop\segunda_fase\segunda_fase\cadastro_cliente\cadastro_cliente\obj\Debug\net8.0-windows\cadastro_cliente.sourcelink.json
+C:\Users\joao.mamendonca\Desktop\segunda_fase\segunda_fase\cadastro_cliente\cadastro_cliente\bin\Debug\net8.0-windows\cadastro_cliente.exe
+C:\Users\joao.mamendonca\Desktop\segunda_fase\segunda_fase\cadastro_cliente\cadastro_cliente\bin\Debug\net8.0-windows\cadastro_cliente.deps.json
+C:\Users\joao.mamendonca\Desktop\segunda_fase\segunda_fase\cadastro_cliente\cadastro_cliente\bin\Debug\net8.0-windows\cadastro_cliente.runtimeconfig.json
+C:\Users\joao.mamendonca\Desktop\segunda_fase\segunda_fase\cadastro_cliente\cadastro_cliente\bin\Debug\net8.0-windows\cadastro_cliente.dll
+C:\Users\joao.mamendonca\Desktop\segunda_fase\segunda_fase\cadastro_cliente\cadastro_cliente\bin\Debug\net8.0-windows\cadastro_cliente.pdb
+C:\Users\joao.mamendonca\Desktop\segunda_fase\segunda_fase\cadastro_cliente\cadastro_cliente\obj\Debug\net8.0-windows\cadastro_cliente.dll
+C:\Users\joao.mamendonca\Desktop\segunda_fase\segunda_fase\cadastro_cliente\cadastro_cliente\obj\Debug\net8.0-windows\refint\cadastro_cliente.dll
+C:\Users\joao.mamendonca\Desktop\segunda_fase\segunda_fase\cadastro_cliente\cadastro_cliente\obj\Debug\net8.0-windows\cadastro_cliente.pdb
+C:\Users\joao.mamendonca\Desktop\segunda_fase\segunda_fase\cadastro_cliente\cadastro_cliente\obj\Debug\net8.0-windows\cadastro_cliente.genruntimeconfig.cache
+C:\Users\joao.mamendonca\Desktop\segunda_fase\segunda_fase\cadastro_cliente\cadastro_cliente\obj\Debug\net8.0-windows\ref\cadastro_cliente.dll
