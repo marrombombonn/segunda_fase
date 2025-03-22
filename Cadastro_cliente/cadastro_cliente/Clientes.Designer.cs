@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            textBoxNome = new TextBox();
+            textBoxNomeCliente = new TextBox();
             textBoxEmail = new TextBox();
             textBoxNomeSocial = new TextBox();
             textBoxEstado = new TextBox();
@@ -40,7 +40,7 @@
             maskedTextBoxCep = new MaskedTextBox();
             maskedTextBoxTelefone = new MaskedTextBox();
             checkBoxSim = new CheckBox();
-            checkBoxNão = new CheckBox();
+            checkBoxNao = new CheckBox();
             textBoxMunicipio = new TextBox();
             textBoxBairro = new TextBox();
             textBoxLogradouro = new TextBox();
@@ -61,14 +61,19 @@
             labelEstrangerio = new Label();
             buttonCadastrar = new Button();
             labelRetorno = new Label();
+            Tipo = new ComboBox();
+            label1 = new Label();
+            dataGridView1 = new DataGridView();
+            VerClientes = new Button();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
-            // textBoxNome
+            // textBoxNomeCliente
             // 
-            textBoxNome.Location = new Point(12, 24);
-            textBoxNome.Name = "textBoxNome";
-            textBoxNome.Size = new Size(284, 23);
-            textBoxNome.TabIndex = 0;
+            textBoxNomeCliente.Location = new Point(12, 24);
+            textBoxNomeCliente.Name = "textBoxNomeCliente";
+            textBoxNomeCliente.Size = new Size(284, 23);
+            textBoxNomeCliente.TabIndex = 0;
             // 
             // textBoxEmail
             // 
@@ -108,6 +113,7 @@
             // comboBoxGenero
             // 
             comboBoxGenero.FormattingEnabled = true;
+            comboBoxGenero.Items.AddRange(new object[] { "Cisgenero", "Transgenero", "NaoBinario", "Agenero", "GeneroFluido", "Bigenero", "Intergenero", "Intersexual" });
             comboBoxGenero.Location = new Point(12, 200);
             comboBoxGenero.Name = "comboBoxGenero";
             comboBoxGenero.Size = new Size(284, 23);
@@ -116,6 +122,7 @@
             // comboBoxEtnia
             // 
             comboBoxEtnia.FormattingEnabled = true;
+            comboBoxEtnia.Items.AddRange(new object[] { "Branco", "Preto", "Pardo", "Indigina", "Amarela" });
             comboBoxEtnia.Location = new Point(12, 253);
             comboBoxEtnia.Name = "comboBoxEtnia";
             comboBoxEtnia.Size = new Size(284, 23);
@@ -133,7 +140,7 @@
             // maskedTextBoxCep
             // 
             maskedTextBoxCep.Location = new Point(377, 200);
-            maskedTextBoxCep.Mask = "00000-000";
+            maskedTextBoxCep.Mask = "00000000";
             maskedTextBoxCep.Name = "maskedTextBoxCep";
             maskedTextBoxCep.Size = new Size(100, 23);
             maskedTextBoxCep.TabIndex = 13;
@@ -158,15 +165,15 @@
             checkBoxSim.Text = "Sim";
             checkBoxSim.UseVisualStyleBackColor = true;
             // 
-            // checkBoxNão
+            // checkBoxNao
             // 
-            checkBoxNão.AutoSize = true;
-            checkBoxNão.Location = new Point(781, 255);
-            checkBoxNão.Name = "checkBoxNão";
-            checkBoxNão.Size = new Size(48, 19);
-            checkBoxNão.TabIndex = 16;
-            checkBoxNão.Text = "Não";
-            checkBoxNão.UseVisualStyleBackColor = true;
+            checkBoxNao.AutoSize = true;
+            checkBoxNao.Location = new Point(781, 255);
+            checkBoxNao.Name = "checkBoxNao";
+            checkBoxNao.Size = new Size(48, 19);
+            checkBoxNao.TabIndex = 16;
+            checkBoxNao.Text = "Não";
+            checkBoxNao.UseVisualStyleBackColor = true;
             // 
             // textBoxMunicipio
             // 
@@ -332,7 +339,7 @@
             buttonCadastrar.TabIndex = 35;
             buttonCadastrar.Text = "Cadastrar";
             buttonCadastrar.UseVisualStyleBackColor = true;
-            buttonCadastrar.Click += buttonCadastrar_Click;
+            buttonCadastrar.Click += buttonCadastrar_Click_1;
             // 
             // labelRetorno
             // 
@@ -342,11 +349,55 @@
             labelRetorno.Size = new Size(0, 15);
             labelRetorno.TabIndex = 36;
             // 
+            // Tipo
+            // 
+            Tipo.FormattingEnabled = true;
+            Tipo.Items.AddRange(new object[] { "PF", "PJ" });
+            Tipo.Location = new Point(12, 298);
+            Tipo.Name = "Tipo";
+            Tipo.Size = new Size(284, 23);
+            Tipo.TabIndex = 37;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(12, 280);
+            label1.Name = "label1";
+            label1.Size = new Size(30, 15);
+            label1.TabIndex = 38;
+            label1.Text = "Tipo";
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.AllowUserToAddRows = false;
+            dataGridView1.AllowUserToDeleteRows = false;
+            dataGridView1.AllowUserToOrderColumns = true;
+            dataGridView1.AllowUserToResizeRows = false;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(12, 437);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.Size = new Size(874, 134);
+            dataGridView1.TabIndex = 39;
+            // 
+            // VerClientes
+            // 
+            VerClientes.Location = new Point(329, 588);
+            VerClientes.Name = "VerClientes";
+            VerClientes.Size = new Size(224, 42);
+            VerClientes.TabIndex = 40;
+            VerClientes.Text = "Ver Clientes";
+            VerClientes.UseVisualStyleBackColor = true;
+            VerClientes.Click += VerClientes_Click;
+            // 
             // Clientes
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(898, 450);
+            ClientSize = new Size(898, 642);
+            Controls.Add(VerClientes);
+            Controls.Add(dataGridView1);
+            Controls.Add(label1);
+            Controls.Add(Tipo);
             Controls.Add(labelRetorno);
             Controls.Add(buttonCadastrar);
             Controls.Add(labelEstrangerio);
@@ -367,7 +418,7 @@
             Controls.Add(textBoxMunicipio);
             Controls.Add(textBoxBairro);
             Controls.Add(textBoxLogradouro);
-            Controls.Add(checkBoxNão);
+            Controls.Add(checkBoxNao);
             Controls.Add(checkBoxSim);
             Controls.Add(maskedTextBoxTelefone);
             Controls.Add(maskedTextBoxCep);
@@ -379,16 +430,17 @@
             Controls.Add(textBoxNumero);
             Controls.Add(textBoxNomeSocial);
             Controls.Add(textBoxEmail);
-            Controls.Add(textBoxNome);
+            Controls.Add(textBoxNomeCliente);
             Name = "Clientes";
             Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private TextBox textBoxNome;
+        private TextBox textBoxNomeCliente;
         private TextBox textBoxEmail;
         private TextBox textBoxNomeSocial;
         private TextBox textBoxEstado;
@@ -400,7 +452,7 @@
         private MaskedTextBox maskedTextBoxCep;
         private MaskedTextBox maskedTextBoxTelefone;
         private CheckBox checkBoxSim;
-        private CheckBox checkBoxNão;
+        private CheckBox checkBoxNao;
         private TextBox textBoxMunicipio;
         private TextBox textBoxBairro;
         private TextBox textBoxLogradouro;
@@ -421,5 +473,9 @@
         private Label labelEstrangerio;
         private Button buttonCadastrar;
         private Label labelRetorno;
+        private ComboBox Tipo;
+        private Label label1;
+        private DataGridView dataGridView1;
+        private Button VerClientes;
     }
 }

@@ -16,7 +16,7 @@ namespace cadastro_cliente
         public string Email { get; set; }
         public Endereco_Cliente Endereco{ get; set; }
         public string NomeSocial { get; set; }
-        public bool Estrengeiro { get; set; }
+        public bool Estrangeiro { get; set; }
         public  Tipo_Cliente Tipo { get; set; }
         public  GeneroCliente Genero { get; set; }
 
